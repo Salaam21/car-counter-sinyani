@@ -1,0 +1,34 @@
+﻿Running Gradle task 'assembleRelease'...                        
+flutter : WARNING: Your app uses the following plugins that apply Kotlin Gradle Plugin (KGP): camera_android_camerax
+At C:\Users\msiny\AppData\Local\Temp\ps-script-e6aa437f-b75c-4eae-a085-6ad08c39a7bf.ps1:81 char:199
++ ... r-counter-sinyani"; flutter build apk --release --no-pub 2>&1 | Out-F ...
++                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: Your a...android_camerax:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Future versions of Flutter will fail to build if your app uses plugins that apply KGP.
+
+Please check the changelogs of these plugins and upgrade to a version that supports Built-in Kotlin.
+If no such version exists, report the issue to the plugin. If necessary, here is a guide on filing 
+an issue against a plugin: https://docs.flutter.dev/release/breaking-changes/migrate-to-built-in-kotlin/for-app-develop
+ers#report-incompatible-kotlin-gradle-plugin-usage-to-plugin-authors
+
+If you are a plugin author, please migrate your plugin to Built-in Kotlin using this guide: 
+https://docs.flutter.dev/release/breaking-changes/migrate-to-built-in-kotlin/for-plugin-authors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':tflite_flutter:compileReleaseKotlin'.
+> Inconsistent JVM Target Compatibility Between Java and Kotlin Tasks
+    Inconsistent JVM Target Compatibility Between Java and Kotlin Tasks
+      Inconsistent JVM-target compatibility detected for tasks 'compileReleaseJavaWithJavac' (1.8) and 
+'compileReleaseKotlin' (17).
+
+* Try:
+> Consider using JVM Toolchain: https://kotl.in/gradle/jvm/toolchain
+> Run with --scan to generate a Build Scan (Powered by Develocity).
+
+BUILD FAILED in 12m 14s
+Running Gradle task 'assembleRelease'...                          746.8s
+Gradle task assembleRelease failed with exit code 1
